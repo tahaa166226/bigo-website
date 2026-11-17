@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BIGO STORE — Official Client Presentation &amp; Quality Review Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #070709;
+      --panel: #111216;
+      --card: #16181e;
+      --text: #f4f4f7;
+      --muted: #8b8e99;
+      --red: #ff1e2d;
+      --red-glow: rgba(255, 30, 45, 0.4);
+      --border: rgba(255, 255, 255, 0.1);
+      --font-display: 'Oswald', sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Top Red Neon Scanner */
+    .top-scanner {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      box-shadow: 0 0 12px var(--red);
+      animation: scan 4s linear infinite;
+    }
+
+    @keyframes scan {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Presentation Header */
+    header {
+      padding: 24px 4% 18px;
+      background: rgba(10, 11, 14, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header-branding {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kicker-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 8px var(--red);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(0.7);
+        opacity: 0.4;
+      }
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 36px);
+      letter-spacing: -0.01em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Device Viewport Switchers */
+    .view-toggles {
+      display: flex;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      padding: 4px;
+      border-radius: 8px;
+      gap: 4px;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      padding: 8px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn:hover {
+      color: #fff;
+    }
+
+    .toggle-btn.active {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 0 15px var(--red-glow);
+    }
+
+    .direct-link-btn {
+      background: rgba(255, 30, 45, 0.15);
+      border: 1px solid rgba(255, 30, 45, 0.4);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .direct-link-btn:hover {
+      background: var(--red);
+      box-shadow: 0 0 15px var(--red-glow);
+    }
+
+    /* Requirements Checklist Banner */
+    .req-banner {
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .req-items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .req-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+    }
+
+    .req-check {
+      color: var(--red);
+      font-weight: 700;
+      background: rgba(255, 30, 45, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 30, 45, 0.3);
+    }
+
+    /* Main Showcase Stage */
+    .showcase-stage {
+      flex: 1;
+      padding: 25px 3%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      transition: all 0.4s ease;
+    }
+
+    .panel {
+      width: 100%;
+      max-width: 1500px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    /* Device View States */
+    .showcase-stage.tablet-view .panel {
+      width: 820px;
+      margin: 0 auto;
+    }
+
+    .showcase-stage.mobile-view .panel {
+      width: 414px;
+      margin: 0 auto;
+    }
+
+    .panel-bar {
+      padding: 14px 20px;
+      background: #0d0e12;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .panel-info h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .direction-badge {
+      background: rgba(255, 30, 45, 0.15);
+      border: 1px solid rgba(255, 30, 45, 0.4);
+      color: var(--red);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .panel-info p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .open-full-btn {
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .open-full-btn:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .iframe-wrapper {
+      flex: 1;
+      height: 78vh;
+      position: relative;
+      background: #000;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* Specifications Cards */
+    .specs-grid {
+      padding: 0 4% 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .spec-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .spec-card h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .feature-list strong {
+      color: #fff;
+    }
+
+    .dot-check {
+      color: var(--red);
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-scanner" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-branding">
+      <div class="kicker">
+        <span class="kicker-dot"></span>
+        <span>FINALIZED FLAGSHIP STOREFRONT // BIGO STORE 2026</span>
+      </div>
+      <h1>BIGO STORE <span>VELOCITY EDITION</span></h1>
+      <p class="subtitle">Complete Dark Mode, Cinematic Video, GSAP 3D Motion, Best Sellers, Zoom Lightbox, InstaPay + 5
+        Vodafone Wallets &amp; Admin Verification.</p>
+    </div>
+
+    <!-- Device Viewport Toggles -->
+    <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <div class="view-toggles" role="group" aria-label="Device viewport mode">
+        <button class="toggle-btn active" id="btn-desktop">DESKTOP (FULLSCREEN)</button>
+        <button class="toggle-btn" id="btn-tablet">TABLET VIEW</button>
+        <button class="toggle-btn" id="btn-mobile">MOBILE VIEW</button>
+      </div>
+      <a href="01-motion/index.html" target="_blank" class="direct-link-btn">
+        <span>OPEN DIRECT SITE ↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Client Requirements Checklist Banner -->
+  <div class="req-banner">
+    <div class="req-items">
+      <div class="req-pill"><span class="req-check">✓</span> Hero Promotional Video (Natural Scroll Away)</div>
+      <div class="req-pill"><span class="req-check">✓</span> 3D Sneaker Lab &amp; GSAP Scroll Animations</div>
+      <div class="req-pill"><span class="req-check">✓</span> Best Seller Section (Dedicated Visual Icon/Image)</div>
+      <div class="req-pill"><span class="req-check">✓</span> Real Customer Reviews Carousel (5 Stars &amp; Verified)
+      </div>
+      <div class="req-pill"><span class="req-check">✓</span> High-Res Product Image Zoom &amp; Lightbox</div>
+      <div class="req-pill"><span class="req-check">✓</span> No Gmail Required &amp; No Cash on Delivery (COD)</div>
+      <div class="req-pill"><span class="req-check">✓</span> InstaPay + 5 Configurable Vodafone Cash Numbers</div>
+      <div class="req-pill"><span class="req-check">✓</span> Mandatory Transfer Proof Upload (Camera &amp; Gallery)
+      </div>
+      <div class="req-pill"><span class="req-check">✓</span> Admin Dashboard (Receipt Verification &amp; 5 Wallets)
+      </div>
+    </div>
+  </div>
+
+  <!-- Showcase Stage with Interactive IFrame -->
+  <main class="showcase-stage" id="showcase-stage">
+    <section class="panel">
+      <div class="panel-bar">
+        <div class="panel-info">
+          <h2>BIGO STORE // OFFICIAL FLAGSHIP STOREFRONT <span class="direction-badge">VELOCITY PROTOCOL</span></h2>
+          <p>Black, White &amp; Animated Crimson Palette · Zero External Dependencies · Full E-Commerce Pipeline.</p>
+        </div>
+        <a class="open-full-btn" href="01-motion/index.html" target="_blank" rel="noopener">
+          <span>OPEN IN NEW TAB</span>
+          <span>↗</span>
+        </a>
+      </div>
+      <div class="iframe-wrapper">
+        <iframe id="store-frame" title="Bigo Store Official Storefront" src="01-motion/index.html"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Comprehensive Feature Verification -->
+  <section class="specs-grid">
+    <div class="spec-card">
+      <h3>01. Creative Cinematic Experience</h3>
+      <ul class="feature-list">
+        <li><span class="dot-check">●</span> <strong>Hero Promotional Video:</strong> Positioned at the very top of the
+          homepage and scrolls away naturally with user scroll. Never sticky or permanently fixed.</li>
+        <li><span class="dot-check">●</span> <strong>Sneaker-Based 3D Motions:</strong> Floating sneakers with dynamic
+          shadows, floating technical shoe boxes, and animated shoelace lines around hero.</li>
+        <li><span class="dot-check">●</span> <strong>3D Sneaker Lab:</strong> Interactive 3D mouse-tilt display with
+          exploded anatomy hotspots (vamp, sole, tread).</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>02. Best Sellers &amp; Customer Reviews</h3>
+      <ul class="feature-list">
+        <li><span class="dot-check">●</span> <strong>Visual Icon Identifier:</strong> Dedicated spinning neon trophy
+          graphic badge identifying the official Best Seller collection.</li>
+        <li><span class="dot-check">●</span> <strong>Direct Product Placement:</strong> High-velocity models placed
+          directly beneath the visual icon with complete card functionality.</li>
+        <li><span class="dot-check">●</span> <strong>Customer Reviews Carousel:</strong> Real client reviews near bottom
+          of page with 5-star ratings, verified badges, product chips, and "+ Write a Review" modal.</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>03. Payment &amp; Admin Operations</h3>
+      <ul class="feature-list">
+        <li><span class="dot-check">●</span> <strong>Payment Rails:</strong> Official InstaPay details + exactly 5
+          Vodafone Cash wallet numbers, each with its own 1-click copy button.</li>
+        <li><span class="dot-check">●</span> <strong>Mandatory Receipt Upload:</strong> Dual options (Option 1 Take a
+          Photo via camera, Option 2 Upload from gallery) with live preview. Orders cannot be submitted without receipt!
+        </li>
+        <li><span class="dot-check">●</span> <strong>Admin Operations Console:</strong> Password gate (`bigo2026`),
+          receipt zoom inspector, verify/reject status buttons, and wallet configuration.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>BIGO STORE // OFFICIAL CLIENT PRESENTATION SUITE</div>
+    <div>DIRECT STOREFRONT LINK: <a href="01-motion/index.html" style="color:var(--red)">01-MOTION/INDEX.HTML</a></div>
+    <div>CAIRO, EGYPT · 2026</div>
+  </footer>
+
+  <script>
+    const stage = document.getElementById('showcase-stage');
+    const btnDesktop = document.getElementById('btn-desktop');
+    const btnTablet = document.getElementById('btn-tablet');
+    const btnMobile = document.getElementById('btn-mobile');
+
+    function setActive(btn) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    btnDesktop.onclick = () => {
+      setActive(btnDesktop);
+      stage.className = 'showcase-stage';
+    };
+
+    btnTablet.onclick = () => {
+      setActive(btnTablet);
+      stage.className = 'showcase-stage tablet-view';
+    };
+
+    btnMobile.onclick = () => {
+      setActive(btnMobile);
+      stage.className = 'showcase-stage mobile-view';
+    };
+  </script>
+</body>
+
+</html>

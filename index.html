@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050506">
+  <title>BIGO // ATELIER NOIR — Option 02 (Haute Editorial)</title>
+
+  <!-- Preconnect & Global Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="atelier">
+
+  <!-- Interactive Luxury Ring Cursor -->
+  <div class="atelier-cursor" aria-hidden="true"></div>
+  <div class="atelier-cursor-dot" aria-hidden="true"></div>
+
+  <!-- Optional 35mm Film Grain Overlay -->
+  <div class="film-grain" id="film-grain" aria-hidden="true"></div>
+
+  <!-- Announcement Bar: Editorial Red & Black -->
+  <div class="atelier-announcement">
+    <div class="announcement-inner">
+      <span class="atelier-drop-mark">COLLECTION ÉDITION NO. 07</span>
+      <span class="dot-sep">✦</span>
+      <span>COMPLIMENTARY WHITE-GLOVE COURIER ON ORDERS OVER EGP 6,000</span>
+      <span class="dot-sep">✦</span>
+      <span class="atelier-promo-chip">PROMO: <b>RED20</b> (20% PRIVILEGE)</span>
+    </div>
+  </div>
+
+  <!-- Architectural Luxury Header -->
+  <header class="header">
+    <div class="header-left">
+      <a class="logo" href="#top" aria-label="Bigo Atelier Home">
+        <span class="logo-serif">BIGO</span>
+        <span class="logo-badge">®</span>
+        <span class="logo-sub">ATELIER NOIR // 02</span>
+      </a>
+      <div class="curator-badge">
+        <span class="curator-dot"></span>
+        <span>EDITION 2026 // CAIRO · MILANO · PARIS</span>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="#shop" class="nav-link active">CURATED SALON</a>
+      <a href="#shop" data-filter="Sneakers" class="nav-link">SNEAKERS</a>
+      <a href="#shop" data-filter="High-Top" class="nav-link">ARCHITECTURAL</a>
+      <a href="#shop" data-filter="Slides" class="nav-link">RECOVERY SLIDES</a>
+      <a href="#shop" data-filter="Limited Edition" class="nav-link red-link">CRIMSON ATELIER</a>
+      <a href="#manifesto" class="nav-link">MANIFESTO</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Currency Switcher -->
+      <div class="currency-wrapper">
+        <label for="currency-select" class="sr-only">Currency</label>
+        <select id="currency-select" class="currency-select" aria-label="Select currency">
+          <option value="EGP">EGP</option>
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="SAR">SAR</option>
+          <option value="AED">AED</option>
+        </select>
+      </div>
+
+      <!-- Search Trigger -->
+      <button class="icon-button search-toggle" aria-label="Open search input">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </button>
+
+      <!-- Wishlist Trigger -->
+      <button class="icon-button wishlist-button" aria-label="View Wishlist">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        <span class="wishlist-count">0</span>
+      </button>
+
+      <!-- Shopping Bag Trigger -->
+      <button class="bag-button" aria-label="Open shopping bag">
+        <span class="bag-text">BAG</span>
+        <span class="bag-count">0</span>
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Open mobile navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" hidden>
+    <div class="mobile-nav-links">
+      <a href="#shop" class="mobile-nav-link">THE CURATED SALON</a>
+      <a href="#shop" data-filter="Sneakers" class="mobile-nav-link">PERFORMANCE SILHOUETTES</a>
+      <a href="#shop" data-filter="High-Top" class="mobile-nav-link">ARCHITECTURAL HIGH-TOPS</a>
+      <a href="#shop" data-filter="Slides" class="mobile-nav-link">RECOVERY SCULPTS</a>
+      <a href="#shop" data-filter="Limited Edition" class="mobile-nav-link red-link">CRIMSON ATELIER DROPS</a>
+      <a href="#manifesto" class="mobile-nav-link">THE ATELIER MANIFESTO</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- Full-Bleed Ultra-Luxury Cinematic Background Hero Section -->
+    <section class="hero-editorial" id="hero-section">
+
+      <!-- Fullscreen Background Video Container -->
+      <div class="video-container">
+        <video id="hero-video" class="hero-video" autoplay muted loop playsinline
+          poster="https://images.pexels.com/videos/6326752/pexels-photo-6326752.jpeg?auto=compress&fit=crop&w=1600">
+          <source src="https://videos.pexels.com/video-files/6326752/6326752-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <!-- Haute Atmosphere Overlays -->
+        <div class="hero-vignette"></div>
+        <div class="red-ambient-aura" aria-hidden="true"></div>
+        <div class="cinema-bars" aria-hidden="true">
+          <div class="bar-top"></div>
+          <div class="bar-bottom"></div>
+        </div>
+      </div>
+
+      <!-- Hero Telemetry & Coordinates -->
+      <div class="editorial-metadata">
+        <span class="meta-tag"><span class="curator-dot"></span> SÉRIE PRIVÉE // 2026</span>
+        <span class="meta-line"></span>
+        <span class="meta-coords">CAIRO SALON · 30°02'N, 31°14'E · EDITION 02</span>
+      </div>
+
+      <!-- Main Haute Typography Layer -->
+      <div class="editorial-content">
+        <div class="atelier-badge">
+          <span class="dot-crimson"></span>
+          <span>HAUTE FOOTWEAR SCULPTURE // NOIR &amp; CRIMSON</span>
+        </div>
+
+        <h1 class="editorial-title">
+          <span class="title-serif">THE ART OF</span>
+          <span class="title-sans">BLACK &amp; <em class="title-crimson">CRIMSON.</em></span>
+        </h1>
+
+        <blockquote class="editorial-quote">
+          “Footwear conceived not as an accessory, but as high architectural sculpture. Deep noir leather punctuated by
+          incandescent scarlet precision.”
+        </blockquote>
+
+        <div class="editorial-cta-row">
+          <a class="atelier-btn primary-atelier" href="#shop">
+            <span>ENTER THE SALON</span>
+            <span class="arrow-glyph">⟶</span>
+          </a>
+          <button class="atelier-btn text-atelier" id="hero-specimen-btn" data-product="3">
+            <span class="dot-crimson"></span>
+            <span>EXHIBIT 03: JORDAN 4 NOIR</span>
+            <span class="tag-price">EGP 1,100</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Luxury Minimalist Video Director HUD -->
+      <div class="atelier-video-hud">
+        <div class="hud-label-row">
+          <span class="hud-dot">●</span>
+          <span>CINEMATIC ARCHIVE FEED</span>
+        </div>
+
+        <div class="hud-angle-selector" role="group" aria-label="Select film presentation">
+          <button class="hud-opt active" data-filter-mode="noir">
+            <span>01</span> NOIR COUTURE
+          </button>
+          <button class="hud-opt" data-filter-mode="scarlet">
+            <span>02</span> SCARLET FLAME
+          </button>
+          <button class="hud-opt" data-filter-mode="mono">
+            <span>03</span> 35MM MONO
+          </button>
+        </div>
+
+        <div class="hud-controls-bottom">
+          <button class="hud-action-btn" id="play-pause-toggle">
+            <span id="play-icon-symbol">Ⅱ</span>
+            <span id="play-text-label">PAUSE FILM</span>
+          </button>
+          <button class="hud-action-btn" id="audio-concierge-toggle">
+            <span class="audio-wave"><i></i><i></i><i></i></span>
+            <span id="audio-text-label">CONCIERGE AUDIO</span>
+          </button>
+          <button class="hud-action-btn" id="grain-toggle">
+            <span>35MM GRAIN</span>
+          </button>
+          <button class="hud-action-btn" id="cinema-toggle">
+            <span>CINEMA BARS</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Bar -->
+      <div class="hero-bottom-bar">
+        <div class="hero-stat-cell">
+          <strong>100%</strong>
+          <span>CERTIFIED TIER-1</span>
+        </div>
+        <div class="hero-stat-cell">
+          <strong>EGP 6,000+</strong>
+          <span>COMPLIMENTARY COURIER</span>
+        </div>
+        <div class="hero-stat-cell">
+          <strong>24/7 VIP</strong>
+          <span>PRIVATE CONCIERGE</span>
+        </div>
+        <a href="#shop" class="hero-scroll-link">
+          <span>DISCOVER EXHIBITION</span>
+          <span class="scroll-arrow">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Silk Marquee Ribbon -->
+    <div class="silk-ribbon" aria-hidden="true">
+      <div class="silk-track">
+        <div class="silk-content">
+          <span>ATELIER NOIR &amp; CRIMSON</span>
+          <span class="silk-star">✦</span>
+          <span>BIGO STORE PRIVATE SALON</span>
+          <span class="silk-star">✦</span>
+          <span>HAUTE FOOTWEAR SCULPTURE</span>
+          <span class="silk-star">✦</span>
+          <span>CURATED FROM WORLD CAPITAL RELEASES</span>
+          <span class="silk-star">✦</span>
+          <span>100% HAND-VERIFIED AUTHENTICITY</span>
+          <span class="silk-star">✦</span>
+          <span>SAME-DAY CAIRO CONCIERGE</span>
+          <span class="silk-star">✦</span>
+        </div>
+        <div class="silk-content" aria-hidden="true">
+          <span>ATELIER NOIR &amp; CRIMSON</span>
+          <span class="silk-star">✦</span>
+          <span>BIGO STORE PRIVATE SALON</span>
+          <span class="silk-star">✦</span>
+          <span>HAUTE FOOTWEAR SCULPTURE</span>
+          <span class="silk-star">✦</span>
+          <span>CURATED FROM WORLD CAPITAL RELEASES</span>
+          <span class="silk-star">✦</span>
+          <span>100% HAND-VERIFIED AUTHENTICITY</span>
+          <span class="silk-star">✦</span>
+          <span>SAME-DAY CAIRO CONCIERGE</span>
+          <span class="silk-star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial Manifesto Section -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="manifesto-grid">
+        <div class="manifesto-meta">
+          <span class="manifesto-number">01 / PHILOSOPHY</span>
+          <h3 class="manifesto-lead-title">SHADOW &amp; FIRE.</h3>
+        </div>
+        <div class="manifesto-text-wrap">
+          <h2 class="manifesto-heading">
+            REJECT THE TRIVIAL.<br>
+            <span>DWELL IN THE ESSENTIAL.</span>
+          </h2>
+          <p class="manifesto-paragraph">
+            The modern wardrobe demands pieces that carry emotional gravity. By stripping away extraneous noise and
+            focusing strictly on the tension between obsidian black and piercing crimson, we elevate sneakers from
+            commodity into permanent design statements.
+          </p>
+          <div class="pillars-row">
+            <div class="pillar-item">
+              <strong>I. LEATHER ARCHITECTURE</strong>
+              <p>Hand-selected tumbled nappa and full-grain hides that age with grace.</p>
+            </div>
+            <div class="pillar-item">
+              <strong>II. SCULPTED SOLES</strong>
+              <p>Ergonomic density matrices engineered for hours of continuous wear.</p>
+            </div>
+            <div class="pillar-item">
+              <strong>III. COUTURE ALLOCATION</strong>
+              <p>Strict small-batch inventory guarantees exclusivity for our patrons.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Curated Salon / Catalog Section -->
+    <section class="salon-section" id="shop">
+      <div class="salon-header">
+        <div class="salon-title-col">
+          <span class="eyebrow-atelier">THE PERMANENT ROTATION</span>
+          <h2 class="salon-title">CURATED <em class="serif-ital">EXHIBITION.</em></h2>
+        </div>
+        <div class="salon-desc-col">
+          <p>Explore the complete editorial selection. Every pair inspected, cataloged, and presented in archival
+            condition.</p>
+        </div>
+      </div>
+
+      <!-- Salon Control Bar -->
+      <div class="salon-controls">
+        <div class="category-filters" role="group" aria-label="Filter catalog">
+          <button class="filter-tab active" data-filter="All">Complete Salon (8)</button>
+          <button class="filter-tab" data-filter="Sneakers">Low Silhouettes (5)</button>
+          <button class="filter-tab" data-filter="High-Top">Architectural High (3)</button>
+          <button class="filter-tab" data-filter="Slides">Recovery Slides (3)</button>
+          <button class="filter-tab red-tab" data-filter="Limited Edition">Crimson Editions (3)</button>
+        </div>
+
+        <div class="controls-right-group">
+          <!-- Search Box -->
+          <div class="salon-search">
+            <svg class="search-glyph" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <input id="search-input" type="search" placeholder="Search archive..." aria-label="Search archive">
+            <button id="clear-search-btn" class="clear-glyph" hidden>×</button>
+          </div>
+
+          <!-- Sort Select -->
+          <div class="salon-sort">
+            <select id="sort-select" aria-label="Sort collection">
+              <option value="featured">Curator's Choice</option>
+              <option value="price-asc">Price: Ascending</option>
+              <option value="price-desc">Price: Descending</option>
+              <option value="name-asc">Model: A–Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Counter Status -->
+      <div class="salon-status-row">
+        <span>Displaying <b id="displayed-count">8</b> archival works</span>
+        <button id="reset-filter-btn" class="reset-filter-btn" hidden>Reset Filter ↺</button>
+      </div>
+
+      <!-- Asymmetrical Editorial Product Grid -->
+      <div class="salon-grid" id="product-grid">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-salon" id="empty-state" hidden>
+        <div class="empty-monogram">✦</div>
+        <h3>NO EXHIBITS CORRESPOND TO YOUR SEARCH</h3>
+        <p>Refine your search term or reset filters to view the full salon rotation.</p>
+        <button class="atelier-btn primary-atelier" id="empty-reset-btn">VIEW ALL EXHIBITS ⟶</button>
+      </div>
+    </section>
+
+    <!-- Editorial Lookbook Highlight Feature -->
+    <section class="lookbook-feature">
+      <div class="lookbook-frame">
+        <div class="lookbook-copy">
+          <span class="eyebrow-atelier">LOOKBOOK STUDY // 07</span>
+          <h2 class="lookbook-title">THE CRIMSON<br><em class="serif-ital">INTERVENTION.</em></h2>
+          <p class="lookbook-desc">
+            Obsidian absorbs light; Crimson commands it. When paired together, the silhouette takes on an arresting
+            graphic clarity that shifts effortlessly between daytime discretion and nocturnal drama.
+          </p>
+          <div class="lookbook-stats">
+            <div class="stat-pill">
+              <strong>950 EGP – 1,350 EGP</strong>
+              <span>ACCESSIBLE LUXURY SPECTRUM</span>
+            </div>
+            <div class="stat-pill">
+              <strong>100% NATIVE</strong>
+              <span>CAIRO CONCIERGE NETWORK</span>
+            </div>
+          </div>
+          <a href="#shop" class="atelier-btn primary-atelier" data-filter="Limited Edition">
+            <span>EXPLORE CRIMSON EDITIONS</span>
+            <span class="arrow-glyph">⟶</span>
+          </a>
+        </div>
+        <div class="lookbook-image">
+          <img
+            src="https://images.pexels.com/photos/34205740/pexels-photo-34205740.jpeg?auto=compress&cs=tinysrgb&w=1400"
+            alt="Nike Dunk Low Varsity Red edition" loading="lazy">
+          <div class="image-plate">PLATE 07 — VARSITY RED OVERLAY ON MATTE SHADOW</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- White-Glove Concierge & Client Assurances -->
+    <section class="assurances-section">
+      <div class="assurance-card">
+        <span class="assurance-num">I</span>
+        <h3>Physical Authenticity Proof</h3>
+        <p>Every specimen is subjected to laboratory ultraviolet and stitching inspection before entering the archive.
+        </p>
+      </div>
+
+      <div class="assurance-card">
+        <span class="assurance-num">II</span>
+        <h3>White-Glove Courier Delivery</h3>
+        <p>Discreet luxury packaging with complimentary delivery on commissions over EGP 6,000 across Egypt.</p>
+      </div>
+
+      <div class="assurance-card">
+        <span class="assurance-num">III</span>
+        <h3>Seamless Payment Options</h3>
+        <p>Instant InstaPay IPA settlement, secure card payment, mobile wallets, or cash upon delivery inspection.</p>
+      </div>
+
+      <div class="assurance-card">
+        <span class="assurance-num">IV</span>
+        <h3>Private Styling Concierge</h3>
+        <p>Direct WhatsApp consultation for sizing advice, private acquisitions, and urgent delivery coordination.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Architectural Editorial Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left-col">
+        <a class="logo footer-logo" href="#top">
+          <span class="logo-serif">BIGO</span>
+          <span class="logo-badge">®</span>
+        </a>
+        <p class="footer-epigraph">FOOTWEAR ELEVATED TO SCULPTURAL ARCHITECTURE.</p>
+
+        <div class="newsletter-section">
+          <label for="newsletter-input" class="newsletter-label">RECEIVE PRIVATE SALON INVITATIONS</label>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" id="newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="newsletter-submit">REGISTER ⟶</button>
+          </form>
+          <p id="newsletter-msg" class="newsletter-msg" hidden></p>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>ARCHIVAL DIVISIONS</h4>
+        <a href="#shop">Complete Archive</a>
+        <a href="#shop" data-filter="Sneakers">Low Silhouettes</a>
+        <a href="#shop" data-filter="High-Top">Architectural High-Tops</a>
+        <a href="#shop" data-filter="Slides">Recovery Sculptures</a>
+        <a href="#shop" data-filter="Limited Edition">Crimson Atelier Drops</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>CLIENT RELATIONSHIPS</h4>
+        <a href="#top" id="footer-rates-link">Courier Dispatch Protocols</a>
+        <a href="#top" id="footer-exchange-link">14-Day Discretionary Exchange</a>
+        <a href="#top" id="footer-sizing-link">EU Sizing Conversion Table</a>
+        <a href="#top" id="footer-auth-link">Certificate of Authenticity</a>
+        <a href="https://wa.me/" target="_blank" rel="noreferrer">Private WhatsApp Desk ↗</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>SALONS &amp; HUBS</h4>
+        <p class="hub-line"><span>RESIDENCE:</span> Zamalek &amp; New Cairo</p>
+        <p class="hub-line"><span>SETTLEMENT:</span> EGP · USD · EUR · SAR · AED</p>
+        <p class="hub-line"><span>EDITION:</span> Autumn / Winter 2026</p>
+        <div class="atelier-socials">
+          <a href="https://instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a>
+          <a href="https://facebook.com/" target="_blank" rel="noreferrer">FACEBOOK ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 BIGO STORE ATELIER EG. ALL RIGHTS RESERVED.</span>
+      <span class="atelier-stamp">OPTION 02: ATELIER NOIR // HIGH EDITORIAL</span>
+      <a href="#top" class="return-top">RETURN TO SUMMIT ↑</a>
+    </div>
+  </footer>
+
+  <!-- Modal Scrim -->
+  <div class="scrim" hidden></div>
+
+  <!-- Editorial Shopping Bag Drawer -->
+  <aside class="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <span class="eyebrow-atelier">PRIVATE ARCHIVE SELECTION</span>
+        <h2>YOUR BAG <span class="bag-count count-tag">0</span></h2>
+      </div>
+      <button class="close-drawer" aria-label="Close bag">×</button>
+    </div>
+
+    <!-- Liquid Crimson Courier Progress Bar -->
+    <div class="courier-meter">
+      <div class="courier-text">
+        <span id="shipping-status-label">Add EGP 6,000 for Complimentary Courier</span>
+        <span id="shipping-pct">0%</span>
+      </div>
+      <div class="courier-track">
+        <div class="courier-fill" id="shipping-bar-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items" id="cart-items">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Bag Footer -->
+    <div class="cart-footer">
+      <div class="promo-row">
+        <input type="text" id="promo-input" placeholder="Privilege Code (Try: RED20)" aria-label="Promo code">
+        <button id="apply-promo-btn">APPLY</button>
+      </div>
+      <div id="promo-notice" class="promo-notice" hidden></div>
+
+      <div class="breakdown-table">
+        <div class="breakdown-item">
+          <span>Archive Subtotal</span>
+          <span id="subtotal-val" class="item-val">EGP 0</span>
+        </div>
+        <div class="breakdown-item discount-item" id="discount-row" hidden>
+          <span>Privilege Discount</span>
+          <span id="discount-val" class="item-val">-EGP 0</span>
+        </div>
+        <div class="breakdown-item">
+          <span>Courier Dispatch</span>
+          <span id="shipping-val" class="item-val">Calculated Next</span>
+        </div>
+        <div class="breakdown-total">
+          <span>Estimated Total</span>
+          <strong id="total-val" class="total-val">EGP 0</strong>
+        </div>
+      </div>
+
+      <button class="atelier-btn primary-atelier checkout-btn" id="open-checkout-btn">
+        <span>PROCEED TO SECURE CHECKOUT</span>
+        <span class="arrow-glyph">⟶</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Product Detail & Quick View Modal -->
+  <dialog id="product-dialog">
+    <button class="close-dialog" aria-label="Close dialog">×</button>
+    <div class="dialog-content" id="dialog-content">
+      <!-- Dynamically filled by app.js -->
+    </div>
+  </dialog>
+
+  <!-- Luxury Checkout Modal -->
+  <dialog id="checkout-dialog">
+    <button class="close-checkout" aria-label="Close checkout">×</button>
+    <div class="checkout-content" id="checkout-content">
+      <!-- Dynamically filled by app.js -->
+    </div>
+  </dialog>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Core Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>
